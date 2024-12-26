@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -13,17 +13,19 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --color1: #058C42;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --color1: #058C42;
   }
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Overpass', sans-serif;
 }
