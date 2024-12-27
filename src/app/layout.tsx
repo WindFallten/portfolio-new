@@ -15,7 +15,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="ru">
-        <body>
+        <body className="container mx-auto px-6">
         <Header />
         {children}
         <Footer />
