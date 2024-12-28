@@ -4,6 +4,9 @@ import Image from "next/image";
 export default function Footer() {
     return (
         <footer className='flex flex-col gap-5 justify-center items-center p-10'>
+            <div className="flex flex-col items-center justify-center gap-3">
+                <h2 className="font-semibold text-2xl xl:text-4xl">Мои <span className="text-xl">маленькие</span> соцсети:</h2>
+            </div>
             <div className='flex flex-row gap-5 justify-center items-center'>
                 <Link href="https://t.me/WindFall">
                     <Image

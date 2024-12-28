@@ -4,8 +4,8 @@ import Image from "next/image";
 
 const AboutPage = () => {
     return (
-        <div className="max-w-4xl mx-auto px-6 py-12 flex flex-col items-center justify-center">
-            <h1 className="text-4xl font-semibold text-center mb-8">Обо мне</h1>
+        <div className="mx-auto flex flex-col items-start justify-start">
+            <h1 className="text-8xl font-semibold  mb-8">Обо мне</h1>
 
             <Image
                 className="rounded-full flex items-center justify-center "

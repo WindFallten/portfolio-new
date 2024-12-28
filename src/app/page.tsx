@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Home() {
     return (
-        <div className="flex flex-col flex-grow items-start gap-16 text-start">
+        <div className="flex flex-col flex-grow items-start gap-16 text-start h-screen">
             <div className="flex flex-col items-start justify-start gap-3">
                 <h1 className="font-semibold text-6xl xl:text-9xl">Привет, я Гоша</h1>
                 <p className="font-medium text-2xl xl:text-4xl">и этот сайт должен выглядеть именно так:</p>
@@ -21,10 +21,6 @@ export default function Home() {
                 >
                     БОЛЬШАЯ КНОПКА ОБО МНЕ
                 </Link>
-            </div>
-            <div className="flex flex-col items-start justify-start gap-3">
-                <h1 className="font-semibold text-6xl xl:text-9xl">Мои соцсети</h1>
-                <p className="font-medium text-2xl xl:text-4xl">в футере, который я специально не клеил:</p>
             </div>
         </div>
     );
