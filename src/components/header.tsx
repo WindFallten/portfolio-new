@@ -58,7 +58,7 @@ export default function Header() {
             <nav
                 className={`${
                     isMenuOpen ? 'block' : 'hidden'
-                } md:hidden absolute top-16 right-0 w-full bg-background text-foreground shadow-lg`}
+                } md:hidden absolute top-16 right-0 w-full bg-background text-foreground shadow-lg  rounded-3xl`}
             >
                 <ul className="flex flex-col items-center py-4">
                     <li>

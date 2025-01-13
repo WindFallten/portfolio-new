@@ -1,13 +1,27 @@
+
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-const PortfolioAccordion = () => {
-    const [openAccordion, setOpenAccordion] = useState<number | null>(null);
+type PortfolioSection = {
+    id: number;
+    title: string;
+    items: Array<{
+        id: number;
+        title: string;
+        date: string;
+        logo: string;
+        url: string;
+    }>;
+};
 
-    const portfolioSections = [
+const PortfolioAccordion: React.FC = () => {
+    const [openAccordion, setOpenAccordion] = useState<number | null>(null);
+    const contentRefs = useRef<Map<number, HTMLDivElement>>(new Map());
+
+    const portfolioSections: PortfolioSection[] = [
         {
             id: 1,
             title: "UX/UI Design",
@@ -102,10 +116,10 @@ const PortfolioAccordion = () => {
             items: [
                 {
                     id: 11,
-                    title: "Швейный мир",
-                    date: "2021-н.в.",
-                    logo: "sw/banner.png",
-                    url: "/portfolio/sw",
+                    title: "Портфолио",
+                    date: "Январь 2025",
+                    logo: "myport/banner.png",
+                    url: "/portfolio/myport",
                 },
             ],
         },
@@ -124,21 +138,39 @@ const PortfolioAccordion = () => {
         },
     ];
 
+
     const toggleAccordion = (id: number) => {
-        setOpenAccordion(openAccordion === id ? null : id);
+        if (openAccordion === id) {
+            setOpenAccordion(null);
+        } else {
+            setOpenAccordion(id);
+        }
+    };
+
+    const setHeight = (id: number) => {
+        const element = contentRefs.current.get(id);
+        if (element) {
+            return openAccordion === id
+                ? `${element.scrollHeight}px`
+                : "0px";
+        }
+        return "0px";
     };
 
     return (
-        <div className=" sm:min-h-screen max-w-screen-2xl mx-auto px-0">
+        <div className="sm:min-h-screen max-w-screen-2xl mx-auto px-0">
             <h1 className="text-6xl lg:text-8xl font-semibold mb-8 text-start">
                 Мои портфолио
             </h1>
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-6 ">
                 {portfolioSections.map((section) => (
-                    <div key={section.id} className="border-4 rounded-3xl overflow-hidden">
+                    <div
+                        key={section.id}
+                        className="border-4 rounded-3xl overflow-hidden "
+                    >
                         {/* Заголовок аккордеона */}
                         <button
-                            className="w-full flex justify-between items-center px-4 sm:px-12 py-6 sm:py-12 font-bold text-3xl sm:text-6xl"
+                            className="w-full flex justify-between items-center px-4 sm:px-12 py-6 sm:py-12 font-bold text-3xl sm:text-6xl hover:text-color1"
                             onClick={() => toggleAccordion(section.id)}
                         >
                             {section.title}
@@ -146,16 +178,28 @@ const PortfolioAccordion = () => {
                         </button>
 
                         {/* Контент аккордеона */}
-                        {openAccordion === section.id && (
+                        <div
+                            ref={(el) => {
+                                if (el) {
+                                    contentRefs.current.set(section.id, el);
+                                }
+                            }}
+                            style={{
+
+                                height: setHeight(section.id),
+                                transition: "height 0.5s ease-in-out",
+                                overflow: "hidden",
+                            }}
+                        >
                             <div className="flex flex-col gap-1 sm:gap-6 px-4 sm:px-12 uppercase">
                                 {section.items.map((item) => (
                                     <Link
                                         key={item.id}
                                         href={item.url}
-                                        className="block rounded-2xl overflow-hidden"
+                                        className="block rounded-3xl overflow-hidden"
                                     >
                                         {/* Картинка с шириной экрана */}
-                                        <div className="relative w-full aspect-[1340/550]">
+                                        <div className="relative w-full aspect-[1340/550] ">
                                             <Image
                                                 src={`/${item.logo}`}
                                                 alt={item.title}
@@ -166,7 +210,8 @@ const PortfolioAccordion = () => {
 
                                         {/* Заголовок и дата */}
                                         <div
-                                            className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 sm:gap-4 sm:gap-0 p-4 sm:p-8">
+                                            className="flex flex-col sm:flex-row items-start sm:items-center justify-between sm:gap-4 sm:gap-0 p-4 sm:p-8"
+                                        >
                                             <h3 className="text-xl sm:text-4xl font-bold text-foreground">
                                                 {item.title}
                                             </h3>
@@ -177,7 +222,7 @@ const PortfolioAccordion = () => {
                                     </Link>
                                 ))}
                             </div>
-                        )}
+                        </div>
                     </div>
                 ))}
             </div>

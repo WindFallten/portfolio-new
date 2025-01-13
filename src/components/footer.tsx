@@ -1,6 +1,3 @@
-import Link from 'next/link';
-import Image from "next/image";
-
 export default function Footer() {
     return (
         <footer className='flex flex-col gap-5 justify-center items-center p-10'>
@@ -40,3 +37,6 @@ export default function Footer() {
         </footer>
     );
 }
+import Link from 'next/link';
+
+import Image from "next/image";
