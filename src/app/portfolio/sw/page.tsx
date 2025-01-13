@@ -1,9 +1,7 @@
-import Link from "next/link";
-
-export default function RelynolliPage() {
+export default function SWPage() {
     return (
         <div className="container mx-auto p-8">
-            <h1 className="text-4xl font-bold mb-6">Проект: Relynolli</h1>
+            <h1 className="text-4xl font-bold mb-6">Проект: Швейный Мир</h1>
 
             <section className="mb-8">
                 <h2 className="text-3xl font-semibold mb-4">Описание проекта</h2>
@@ -39,3 +37,5 @@ export default function RelynolliPage() {
         </div>
     );
 }
+
+import Link from "next/link";

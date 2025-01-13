@@ -10,7 +10,7 @@ export default function Header() {
     const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
     return (
-        <header className="py-4 sticky top-0 z-50 mx-auto px-6 sm:px-12 flex justify-between items-center text-background bg-foreground rounded-3xl mt-10 mb-14 ring-2 ring-offset-4 ring-foreground">
+        <header className="py-4 sticky top-0 z-50 mx-auto px-6 sm:px-12 flex justify-between items-center text-background bg-foreground rounded-3xl mt-10 mb-14">
             <Link href="/">
                 <Image
                     className="invert dark:invert-0 hover:fill-color1"
