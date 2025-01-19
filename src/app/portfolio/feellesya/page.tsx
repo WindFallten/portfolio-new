@@ -1,17 +1,17 @@
 import Image from "next/image";
 
-export default function FoliproPage() {
+export default function FeelPage() {
     return (
         <div className="flex flex-col items-start w-full gap-8">
             {/* Заголовок */}
             <h1 className="text-4xl lg:text-8xl font-bold w-full text-left px-4">
-                Folipro
+                Feellesya
             </h1>
 
             {/* Первая картинка (на всю ширину экрана) */}
             <Image
-                src="/folipro/banner.png"
-                alt="Folipro"
+                src="/feellesya/banner.png"
+                alt="Feellesya"
                 width={1920} // Условно большой размер
                 height={0} // Автоматический расчет пропорций
                 className="w-full h-auto"
@@ -42,20 +42,13 @@ export default function FoliproPage() {
                 </ul>
             </section>
 
+            {/* Вторая картинка (пример другой картинки на всю ширину) */}
             <Image
-                src="/folipro/2.png"
-                alt="До"
+                src="/feellesya/1.png"
+                alt="Another example"
                 width={1920} // Условно большой размер
                 height={0} // Автоматический расчет пропорций
-                className="w-full h-auto rounded-3xl"
-            />
-
-            <Image
-                src="/folipro/1.png"
-                alt="После"
-                width={1920} // Условно большой размер
-                height={0} // Автоматический расчет пропорций
-                className="w-full h-auto rounded-3xl"
+                className="w-full h-auto"
             />
 
             {/* Технологии */}

@@ -28,38 +28,31 @@ const PortfolioAccordion: React.FC = () => {
             items: [
                 {
                     id: 1,
-                    title: "Relynolli - редизайн",
-                    date: "Май 2023",
-                    logo: "relynolli/banner.png",
-                    url: "/portfolio/relynolli",
+                    title: "Folipro - редизайн",
+                    date: "Сентябрь 2024",
+                    logo: "folipro/banner.png",
+                    url: "/portfolio/folipro",
                 },
                 {
                     id: 2,
-                    title: "Nicety",
-                    date: "Февраль 2023",
-                    logo: "nicety/banner.png",
-                    url: "/portfolio/nicety",
-                },
-                {
-                    id: 3,
-                    title: "Alpha Engineering",
-                    date: "2023-2024",
-                    logo: "ae/banner.png",
-                    url: "/portfolio/ae",
-                },
-                {
-                    id: 4,
                     title: "Random-Sport",
                     date: "Январь 2025",
                     logo: "rs/banner.png",
                     url: "/portfolio/rs",
                 },
                 {
-                    id: 5,
-                    title: "Folipro - редизайн",
-                    date: "Сентябрь 2024",
-                    logo: "folipro/banner.png",
-                    url: "/portfolio/folipro",
+                    id: 3,
+                    title: "Nicety",
+                    date: "Февраль 2023",
+                    logo: "nicety/banner.png",
+                    url: "/portfolio/nicety",
+                },
+                {
+                    id: 4,
+                    title: "Alpha Engineering",
+                    date: "2023-2024",
+                    logo: "ae/banner.png",
+                    url: "/portfolio/ae",
                 },
             ],
         },
@@ -68,14 +61,14 @@ const PortfolioAccordion: React.FC = () => {
             title: "Графический дизайн",
             items: [
                 {
-                    id: 6,
+                    id: 5,
                     title: "Швейный мир",
                     date: "2022-н.в.",
                     logo: "sw/banner.png",
                     url: "/portfolio/sw",
                 },
                 {
-                    id: 7,
+                    id: 6,
                     title: "Barrique",
                     date: "Июль 2024",
                     logo: "barrique/banner.png",
@@ -85,28 +78,22 @@ const PortfolioAccordion: React.FC = () => {
         },
         {
             id: 3,
-            title: "Разработка на Tilda",
+            title: "Tilda Разработка",
             items: [
+                {
+                    id: 7,
+                    title: "Feellesya",
+                    date: "Февраль 2024, Ноябрь 2024",
+                    logo: "feellesya/banner.png",
+                    url: "/portfolio/feellesya",
+                },
+
                 {
                     id: 8,
                     title: "Bilston",
                     date: "Июль 2024",
                     logo: "bilston/banner.png",
                     url: "/portfolio/bilston",
-                },
-                {
-                    id: 9,
-                    title: "Relynolli - сайт",
-                    date: "Март 2024",
-                    logo: "relynolli/banner.png",
-                    url: "/portfolio/relynolli/site",
-                },
-                {
-                    id: 10,
-                    title: "Feellesya",
-                    date: "Февраль 2024, Ноябрь 2024",
-                    logo: "feellesya/banner.png",
-                    url: "/portfolio/feellesya",
                 },
             ],
         },
@@ -115,7 +102,7 @@ const PortfolioAccordion: React.FC = () => {
             title: "Frontend разработчик",
             items: [
                 {
-                    id: 11,
+                    id: 9,
                     title: "Портфолио",
                     date: "Январь 2025",
                     logo: "myport/banner.png",
@@ -128,7 +115,7 @@ const PortfolioAccordion: React.FC = () => {
             title: "Контент-менеджер",
             items: [
                 {
-                    id: 12,
+                    id: 10,
                     title: "Швейный мир",
                     date: "2021-н.в.",
                     logo: "sw/banner.png",
@@ -158,7 +145,7 @@ const PortfolioAccordion: React.FC = () => {
     };
 
     return (
-        <div className="sm:min-h-screen max-w-screen-2xl mx-auto px-0">
+        <div className="sm:min-h-screen max-w-screen-2xl mx-auto">
             <h1 className="text-6xl lg:text-8xl font-semibold mb-8 text-start">
                 Мои портфолио
             </h1>

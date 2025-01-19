@@ -1,7 +1,7 @@
-export default function RelynolliSitePage() {
+export default function BarriquePage() {
     return (
         <div className="container mx-auto p-8">
-            <h1 className="text-4xl font-bold mb-6">Проект: Сайт на Tilda для компании Relynolli</h1>
+            <h1 className="text-4xl font-bold mb-6">Barrique</h1>
 
             <section className="mb-8">
                 <h2 className="text-3xl font-semibold mb-4">Описание проекта</h2>
